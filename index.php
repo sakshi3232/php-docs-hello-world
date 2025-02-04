@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
             VALUES ('$first_name', '$last_name', '$email', '$password')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful! You can now <a href='index.php'>log in</a>.";
+        echo "Registration successful! You can now <a href='index.php?login=1'>log in</a>.";
     } else {
         echo "Error: " . $conn->error;
     }
@@ -54,7 +54,7 @@ if (isset($_GET['logout'])) {
     exit();
 }
 
-// Handle Attendance Marking (Admin side) - For simplicity, we mark attendance in the same file
+// Handle Attendance Marking
 if (isset($_POST['mark_attendance'])) {
     $attendance_date = $_POST['attendance_date'];
     $schedule_id = $_POST['schedule_id'];
@@ -116,7 +116,7 @@ if (isset($_POST['mark_attendance'])) {
         <?php if (isset($_GET['dashboard']) && isset($_SESSION['student_id'])): ?>
         <h2>Welcome to the Student Dashboard</h2>
         <?php
-        // Fetch courses and attendance details
+        // Fetch courses and attendance details for the student
         $student_id = $_SESSION['student_id'];
         $sql = "SELECT c.course_name, c.course_code, s.schedule_id, s.day_of_week, s.start_time, s.end_time
                 FROM courses c
