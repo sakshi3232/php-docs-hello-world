@@ -12,10 +12,10 @@ session_start();
         /* General Body Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #11998e, #38ef7d);
+            background-color: #F5F7FA; /* Light Grey Background */
             margin: 0;
             padding: 0;
-            color: white;
+            color: #333333; /* Dark Grey Text */
             display: flex;
             flex-direction: column;
             height: 100vh;
@@ -24,19 +24,20 @@ session_start();
 
         /* Header Section */
         .header {
-            background: rgba(0, 0, 0, 0.7);
+            background-color: #4A90E2; /* Soft Blue Header */
             padding: 20px;
             text-align: center;
             font-size: 32px;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
+            color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* Navigation Bar */
         .nav-bar {
-            background: rgba(0, 0, 0, 0.8);
+            background-color: #333333; /* Dark Grey Nav Bar */
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -53,8 +54,8 @@ session_start();
         }
 
         .nav-bar a:hover {
-            background-color: #38ef7d;
-            color: #333;
+            background-color: #7ED321; /* Light Green on Hover */
+            color: #333333;
             transform: scale(1.05);
         }
 
@@ -71,12 +72,12 @@ session_start();
 
         /* Card Component Styles */
         .card {
-            background-color: white;
+            background-color: #FFFFFF; /* White Cards */
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            color: #333;
+            color: #333333;
             transition: 0.3s ease-in-out;
         }
 
@@ -87,7 +88,7 @@ session_start();
 
         /* Button Styles */
         .btn {
-            background: #ff7f50;
+            background-color: #4A90E2; /* Soft Blue Buttons */
             color: white;
             padding: 12px 18px;
             margin: 10px;
@@ -101,7 +102,7 @@ session_start();
         }
 
         .btn:hover {
-            background: #ff5733;
+            background-color: #7ED321; /* Light Green on Hover */
             transform: translateY(-3px);
         }
 
@@ -109,7 +110,7 @@ session_start();
         .footer {
             text-align: center;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.8);
+            background-color: #333333; /* Dark Grey Footer */
             color: white;
             font-size: 14px;
         }
